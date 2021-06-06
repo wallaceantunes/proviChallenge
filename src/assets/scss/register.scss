@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+
+.register {
+    min-height: 100vh;
+    padding-bottom: 130px;
+}
+.rowDivision {
+    margin-top: 20px;
+}
+
+.register-title {
+    font-size: 32px;
+    text-align: center;
+    line-height: 36px;
+    letter-spacing: -0.04em;
+    color: inherit;
+    font-weight: 700;
+    margin-top: 40px;
+}
+.divider {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    position: relative;
+    text-align: center;
+}
+.rowLogo {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 30px; 
+}
+
+a.link-green:link, a.link-green:visited, a.link-green:hover {
+    color: $primary;
+}
+
+.politic-text{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+}
