@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.login {
+    height: 100vh;
+}
+.rowDivision {
+    margin-top: 20px;
+}
+.divider {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    position: relative;
+    text-align: center;
+}
+.rowLogo {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d9dadc;
+    margin-bottom: 30px; 
+}
