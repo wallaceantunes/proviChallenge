@@ -39,3 +39,167 @@
     color: #fff;
     background-color: #616467;
 }
+
+.btn-list {
+    background-color: #000;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+    padding: 0px 16px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 5px;
+    .material-icons {
+        color: #b3b3b3 !important;
+    }
+    .text-btn-list {
+        color: #b3b3b3;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: normal;
+        line-height: 16px;
+        text-transform: none;
+        padding-left: 10px;
+    }
+}
+.btn-list:hover {
+    cursor: pointer;
+    .material-icons {
+        color: #fff !important;
+    }
+    .text-btn-list {
+        color: #fff;
+    }
+}
+
+.btn-list[active = true] {
+    background-color: #282828;
+    .material-icons {
+        color: #fff !important;
+    }
+    .text-btn-list {
+        color: #fff;
+    }
+}
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    .material-icons {
+        color: #b3b3b3 !important;
+    }
+}
+
+.btn-icon:hover {
+    .material-icons {
+        color: #fff !important;
+    }
+}
+
+
+.btn-circle-icon {
+    background-color: #fff;
+    border: none;
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    .material-icons {
+        color: #000 !important;
+    }
+}
+.dropdown {
+    .dropdown-content {
+        background-color: #282828;
+        padding: 5px;
+        display: none;
+        position: absolute;
+        min-height: 1px;
+        min-width: 150px;
+        z-index: 1;
+        margin-left: -90px;
+        border-radius: 4px;
+        .dropdown-item {
+            padding: 0 10px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .dropdown-item:hover{
+            background-color: #3e3e3e;
+        }
+    }
+}
+.dropdown:hover {
+    .dropdown-content {
+        display: block;
+    }
+}
+
+
+.btn-dropdown {
+    background-color: transparent;
+    cursor: pointer;
+    height: 32px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 23px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.btn-dropdown:hover {
+    background-color: #282828;
+}
+
+
+.btn-music-list {
+    background-color: transparent;
+    width: 100%;
+    height: 56px;
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+    .list-music-content {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        .list-music-img {
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+        .list-music-info{
+            justify-self: start;
+            display: grid;
+            .title {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .sub-title {
+                color: #b3b3b3;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        .list-music-time {
+            color: #b3b3b3;
+            margin-left: auto;
+            padding-right: 10px;
+        }
+    }
+}
+.btn-music-list:hover {
+    background-color: #2a2a2a;
+}
