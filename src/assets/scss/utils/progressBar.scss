@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.progress-bar-content {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar-content-volume {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 50%;
+}
+
+.progress-bar-time {
+    margin-top: 10px;
+    min-width: 40px;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 11px;
+}
+
+.progress-bar-border {
+    margin-top: 10px;
+    width: calc(100% - 80px);
+    height: 5px;
+    border-radius: 5px;
+    background-color: #535353;
+    .progress-bar {
+        width: 50%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: #b3b3b3;
+    }
+}
+.progress-bar-border:hover {
+    .progress-bar {
+        background-color: $primary;
+    }
+}
