@@ -17,7 +17,7 @@ function Inside() {
                 <Content />
             </Col>
         </Row>
-        <Row className="player">
+        <Row className="player hidden-xs">
             <Col className="no-padding" xs={12} sm={12} md={12} lg={12}>
                 <Player />
             </Col>

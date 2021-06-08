@@ -1,6 +1,6 @@
 import '../assets/scss/content.scss';
 import Header from './utils/Header'
-import { Switch, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import CardScreen from './CardScreen'
 import SearchScreen from './SearchScreen'
 import ArtistProfile from './ArtistProfile'
@@ -10,9 +10,15 @@ function Content() {
         <>
             <Header />
             <div className="bg-content">
-                <CardScreen />
-                {/* <SearchScreen /> */}
-                {/* <ArtistProfile /> */}
+                    <Route exact path="/app/">
+                        <CardScreen />
+                    </Route>
+                    <Route path="/app/busca">
+                        <SearchScreen />
+                    </Route>
+                    <Route path="/app/perfil">
+                        <ArtistProfile />
+                    </Route>
             </div>
         </>
     );

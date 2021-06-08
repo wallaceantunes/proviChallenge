@@ -44,3 +44,26 @@ code {
 .h6 {
   font-size: 14px;
 }
+
+@media only screen and (max-width: 750px) {
+  .hidden-xs {
+    display: none !important;
+  }
+  .content {
+    height: 100vh !important;
+  }
+  .bg-content {
+    height: calc(100vh - 60px) !important;
+  }
+  .row-logo {
+    text-align: center;
+  }
+  .btn-list {
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 751px) {
+  .hidden-md {
+    display: none !important;
+  }
+}

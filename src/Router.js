@@ -9,7 +9,7 @@ function Router() {
         <Switch>
             <Route exact path='/' component={Login} />
             <Route exact path='/cadastro' component={Register} />
-            <Route exact path='/app' component={Inside} />
+            <Route exact path='/app*' component={Inside} />
         </Switch>
     )
 }
