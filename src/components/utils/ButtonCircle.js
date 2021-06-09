@@ -1,11 +1,11 @@
+import React from 'react';
 import '../../assets/scss/utils/button.scss';
-import Icon from 'material-icons-react';
 
-function ButtonCircle({icon}) {
+function ButtonCircle({icon, playPause}) {
     return (
         <>
-            <button className="btn-circle-icon">
-                <Icon icon={icon} size={20}/>
+            <button className="btn-circle-icon" onClick={playPause}>
+                <i className="material-icons 20 md-dark">{icon}</i>
             </button>
         </>
     );

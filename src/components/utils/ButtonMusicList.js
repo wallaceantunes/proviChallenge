@@ -7,11 +7,11 @@ function ButtonMusicList() {
             <button className="btn-music-list">
                 <div className="list-music-content">
                     <img src={img} className="list-music-img" />
-                    <div class="list-music-info">
-                        <span class="title">Nome de musica</span>
-                        <span class="sub-title">Nome do artita</span>
+                    <div className="list-music-info">
+                        <span className="title">Nome de musica</span>
+                        <span className="sub-title">Nome do artita</span>
                     </div>
-                    <span class="list-music-time">0:00</span>
+                    <span className="list-music-time">0:00</span>
                 </div>
             </button>
         </>
