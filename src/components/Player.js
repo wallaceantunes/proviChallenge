@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import '../assets/scss/player.scss';
@@ -8,16 +8,23 @@ import {Container, Row, Col} from 'react-grid-system'
 import ButtonIcon from './utils/ButtonIcon'
 import ButtonCircle from './utils/ButtonCircle'
 import InfoMusic from './utils/InfoMusic'
-
-import music from '../assets/mp3/testeMusica.mp3'
+import { getMusicSelected } from '../api/spotifyApi'
 
 
 function Player() {
     const [isPlaying, setIsPlaying] = useState(false)
     const [progress, setProgress] = useState(0)
     const [durationAtM, setDurationAtM] = useState('0:00')
+    const [musicSelected, setMusicSelected] = useState([])
     const audioRef = useRef()
-    
+    const handleMusic = async () => {
+        try {
+            const resp = await getMusicSelected()
+            setMusicSelected(resp.data.music)
+        } catch (error) {
+            alert('erro interno')
+        }
+    }
     const playPause =() => {
         setIsPlaying(!isPlaying)
         console.log(audioRef.current);
@@ -27,7 +34,7 @@ function Player() {
             audioRef.current.play();
           }  
     }
-    const timeUpdate = (ev) => {
+    const timeUpdate = () => {
         var currentTime = audioRef.current.currentTime;
         var duration = audioRef.current.duration;
         setProgress((currentTime +.25)/duration*100)
@@ -43,13 +50,16 @@ function Player() {
     const changeVolume = (ev) => {
         audioRef.current.volume = (ev/100)
     }
+    useEffect(() => {
+        handleMusic()
+    }, [])
     return (
         <div>
-            <audio id="audio" src={music} onTimeUpdate={timeUpdate} ref={audioRef}></audio>
+            <audio id="audio" src={musicSelected.audio} onTimeUpdate={timeUpdate} ref={audioRef}></audio>
             <Container fluid>
                 <Row align="center" justify="center">
                     <Col className="row-player" xs={4} sm={4} md={4} lg={4}>
-                        <InfoMusic />
+                        <InfoMusic music={musicSelected} />
                     </Col>
                     <Col className="row-player text-center" xs={4} sm={4} md={4} lg={4}>
                         <Row>

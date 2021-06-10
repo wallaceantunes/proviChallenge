@@ -1,12 +1,13 @@
 import '../../assets/scss/utils/card.scss';
-function Card() {
-    const img = 'https://via.placeholder.com/175x175'
+
+function Card({music}) {
+    const img = music.thumb
     return (
         <div className="card">
-            <img src={img} width="100%"/>
+            <img src={img} width="175px" height="175px"/>
             <div className="card-text">
-                <span className="title">Nome da musica</span>
-                <span className="sub-title">nome do artista</span>
+                <span className="title">{music.name}</span>
+                <span className="sub-title">{music.band}</span>
             </div>
         </div>
     );

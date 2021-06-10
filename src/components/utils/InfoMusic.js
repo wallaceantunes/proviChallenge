@@ -1,13 +1,13 @@
 import '../../assets/scss/utils/infoMusic.scss';
 
-function InfoMusic() {
-    const img = 'https://via.placeholder.com/50x50'
+function InfoMusic({music}) {
+    const img = music.thumb
     return (
         <div className="card-music">
-            <img src={img} />
+            <img src={img} width="50px" height="50px"/>
             <div className="info-music">
-                <span className="name-music">Nome da musica</span>
-                <span className="name-artist">Nome do cantor</span>
+                <span className="name-music">{music.name}</span>
+                <span className="name-artist">{music.band}</span>
             </div>
         </div>
     );

@@ -31,10 +31,21 @@
     padding: 20px;
     border-radius: 4px;
     text-align: left;
-    .img-cricle {
+    .img-border {
+        padding-bottom: 92px;
+        width: 92px;
         border-radius: 50%;
+        position: relative;
         box-shadow: 0 8px 24px rgba(0,0,0,.5);
         -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+    .img-cricle {
+        border-radius: 50%;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
     .card-text {
         margin-top: 10px;

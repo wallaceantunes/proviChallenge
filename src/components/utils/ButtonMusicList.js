@@ -1,17 +1,17 @@
 import '../../assets/scss/utils/button.scss';
 
-function ButtonMusicList() {
-    const img = 'https://via.placeholder.com/40x40'
+function ButtonMusicList({ music }) {
+    const img = music.thumb
     return (
         <>
             <button className="btn-music-list">
                 <div className="list-music-content">
-                    <img src={img} className="list-music-img" />
+                    <img src={img} className="list-music-img" width="50px" height="50px" />
                     <div className="list-music-info">
-                        <span className="title">Nome de musica</span>
-                        <span className="sub-title">Nome do artita</span>
+                        <span className="title">{music.name}</span>
+                        <span className="sub-title">{music.band}</span>
                     </div>
-                    <span className="list-music-time">0:00</span>
+                    <span className="list-music-time">3:35</span>
                 </div>
             </button>
         </>
