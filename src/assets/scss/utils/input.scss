@@ -1,0 +1,84 @@
+@import '../variables.scss';
+
+.input-control {
+    width: calc(100% - 30px);
+    height: calc(40px - 14px);
+    padding: 6px 12px;
+    border: 1px solid #d9dadc;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222326;
+}
+.input-control:focus, .input-control:focus-visible {
+    outline: none;
+    border: 1px solid #919496;
+}
+
+.input-control::placeholder {
+    color: #616467;
+}
+
+.label-control {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.checkbox {
+    color: #616467;
+    font-weight: 400;
+    position: sticky;
+    padding-left: 30px;
+}
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c1c3c6;
+    border-radius: 4px;
+}
+
+.checkbox:hover {
+    cursor: pointer;
+}
+
+.checkbox input:checked ~ .checkmark {
+    border-color: $primary;
+    background-color: $primary;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a.link-green:link, a.link-green:visited, a.link-green:hover {
+    color: $primary;
+}

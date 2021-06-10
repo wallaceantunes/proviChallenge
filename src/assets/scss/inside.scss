@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+.inside {
+    height: 100vh;
+    max-width: 100% !important;
+    overflow: hidden;
+}
+
+.content {
+    height: calc(100vh - 90px);
+}
+.player {
+    height: 90px;
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    color: #fff;
+}
+
+.no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

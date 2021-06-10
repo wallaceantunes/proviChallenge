@@ -1,0 +1,68 @@
+.card {
+    cursor: pointer;
+    background-color: #181818;
+    width: 90%;
+    height: 250px;
+    padding: 16px;
+    border-radius: 4px;
+    .card-text {
+        margin-top: 10px;
+        display: grid;
+        text-align: left;
+        .title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .sub-title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #b3b3b3;
+        }
+    }
+}
+.card:hover {
+    background-color: #282828;
+}
+
+.card-search {
+    cursor: pointer;
+    background-color: #181818;
+    width: 90%;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: left;
+    .img-border {
+        padding-bottom: 92px;
+        width: 92px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 8px 24px rgba(0,0,0,.5);
+        -webkit-box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    }
+    .img-cricle {
+        border-radius: 50%;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .card-text {
+        margin-top: 10px;
+        text-align: left;
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .badge-title {
+            background-color: rgba(0,0,0,.2);
+            border-radius: 500px;
+            color: #fff;
+            padding: 6px 12px;
+        }
+    }
+}
+
+.card-search:hover {
+    background-color: #282828;
+}

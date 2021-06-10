@@ -1,0 +1,16 @@
+.card-music {
+    display: flex;
+    align-items: center;
+}
+.info-music {
+    padding-left: 15px;
+    display: grid;
+    .name-music {
+        font-size: 14px;
+        color: #fff;
+    }
+    .name-artist {
+        font-size: 11px;
+        color: #b3b3b3;
+    }
+}
